@@ -20,12 +20,12 @@
 <img src={locationTopWave} class="location-top-wave" alt="" />
 <section class="location">
 	<h2 class="title {localeStore.locale}">{$_('location.title')}</h2>
-	<p class="venue en">Woodbury Community Association</p>
+	<p class="venue en">남산 한남 웨딩 가든</p>
 	<button class="copy-address en" onclick={copyAddress}>
 		<span class="clipboard-icon">
 			<Clipboard size="1.1em" />
 		</span>
-		<span class="address">108 Lamplighter, Irvine, CA 92620</span></button
+		<span class="address">서울 용산구 소월로 323</span></button
 	>
 	<div class="map">
 		<iframe
@@ -36,7 +36,7 @@
 			src={googleMapsUrl}
 		></iframe>
 	</div>
-	<p class="signature en">made with ♡ by Emily & Anthony</p>
+	<p class="signature en">made with ♡ by Yejin & Hyun</p>
 	<a class="github-icon" href="https://github.com/anthopark/our-wedding-invitation" target="_blank"
 		><Github size="1.1em" strokeWidth={1} /></a
 	>

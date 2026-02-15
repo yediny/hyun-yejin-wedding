@@ -31,9 +31,9 @@
 	</div>
 
 	<div class="names-kr-box">
-		<span class="names kr">박건희</span>
+		<span class="names kr">이현</span>
 		<span class="names kr">그리고</span>
-		<span class="names kr">피아영</span>
+		<span class="names kr">김예진</span>
 	</div>
 
 	<div class="cover-title-container">
