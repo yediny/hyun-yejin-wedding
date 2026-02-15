@@ -7,11 +7,11 @@
 	import { Clipboard, Github } from '@lucide/svelte';
 	import { PUBLIC_GOOGLE_MAPS_API_KEY } from '$env/static/public';
 
-	const googleMapsUrl = `https://www.google.com/maps/embed/v1/place?key=${PUBLIC_GOOGLE_MAPS_API_KEY}&q=${encodeURIComponent('108 Lamplighter, Irvine, CA 92620')}`;
+	const googleMapsUrl = `https://www.google.com/maps/embed/v1/place?key=${PUBLIC_GOOGLE_MAPS_API_KEY}&q=${encodeURIComponent('남산 한남 웨딩 가든')}`;
 
 	function copyAddress() {
 		navigator.clipboard
-			.writeText('108 Lamplighter, Irvine, CA 92620')
+			.writeText('서울 용산구 소월로 323')
 			.then(() => alert($_('location.address_copied')))
 			.catch(() => null);
 	}
