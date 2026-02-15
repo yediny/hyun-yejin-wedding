@@ -1,4 +1,5 @@
 <script lang="ts">
+	import photo1 from '$lib/assets/gallery/1.webp';
 	import photo2 from '$lib/assets/gallery/2.webp';
 	import photo3 from '$lib/assets/gallery/3.webp';
 	import photo4 from '$lib/assets/gallery/4.webp';
@@ -6,9 +7,6 @@
 	import photo6 from '$lib/assets/gallery/6.webp';
 	import photo7 from '$lib/assets/gallery/7.webp';
 	import photo8 from '$lib/assets/gallery/8.webp';
-	import photo9 from '$lib/assets/gallery/9.webp';
-	import photo10 from '$lib/assets/gallery/10.webp';
-	import photo11 from '$lib/assets/gallery/11.webp';
 
 	import PhotoSwipeLightBox from 'photoswipe/lightbox';
 	import PhotoSwipe from 'photoswipe';
@@ -30,7 +28,7 @@
 
 	const photos = [
 		{
-			src: photo10,
+			src: photo1,
 			width: 1200,
 			height: 1800
 		},
@@ -68,16 +66,6 @@
 			src: photo8,
 			width: 1200,
 			height: 1800
-		},
-		{
-			src: photo9,
-			width: 1200,
-			height: 1790
-		},
-		{
-			src: photo11,
-			width: 1200,
-			height: 1790
 		}
 	];
 </script>
@@ -160,9 +148,7 @@
 	.slide:nth-child(3),
 	.slide:nth-child(5),
 	.slide:nth-child(7),
-	.slide:nth-child(8),
-	.slide:nth-child(9),
-	.slide:nth-child(10) {
+	.slide:nth-child(8) {
 		grid-row: span 2;
 	}
 </style>
