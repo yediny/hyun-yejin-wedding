@@ -30,7 +30,9 @@
 		padding: 2em 3.5em 4em 3.5em;
 
 		.title {
-			@extend .title-font-en;
+			color: $primary-color;
+			font-size: 1.8rem;
+			font-weight: 700;
 			text-align: center;
 			margin-bottom: 1em;
 		}

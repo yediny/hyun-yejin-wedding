@@ -114,13 +114,16 @@
 
 	h2.title {
 		text-align: center;
+		color: $primary-color;
 		&.en {
-			@extend .title-font-en;
+			font-size: 1.8rem;
+			font-weight: 700;
 			letter-spacing: 1px;
 		}
 
 		&.kr {
-			@extend .title-font-kr;
+			font-size: 1.3rem;
+			font-weight: 600;
 			letter-spacing: 1px;
 		}
 	}

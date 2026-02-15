@@ -87,7 +87,9 @@
 		}
 
 		&.opened {
-			@extend .input-focused;
+			outline: solid;
+			outline-width: 3px;
+			outline-color: $blue-1;
 		}
 
 		.chevron-down-container {

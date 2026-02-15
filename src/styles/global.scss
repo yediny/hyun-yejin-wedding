@@ -109,3 +109,22 @@ section.location {
 	max-width: $content-max-width;
 	margin: auto;
 }
+
+// Global utility classes for use with @extend
+:global(.input-focused) {
+	outline: solid;
+	outline-width: 3px;
+	outline-color: $blue-1;
+}
+
+:global(.title-font-kr) {
+	color: $primary-color;
+	font-size: 1.3rem;
+	font-weight: 600;
+}
+
+:global(.title-font-en) {
+	color: $primary-color;
+	font-size: 1.8rem;
+	font-weight: 700;
+}

@@ -65,12 +65,14 @@
 		letter-spacing: 1px;
 
 		&.kr {
-			@extend .title-font-kr;
+			font-size: 1.3rem;
+			font-weight: 600;
 			margin-bottom: 0.4em;
 		}
 
 		&.en {
-			@extend .title-font-en;
+			font-size: 1.8rem;
+			font-weight: 700;
 			margin-bottom: 0.2em;
 		}
 	}
