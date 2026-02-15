@@ -1,9 +1,5 @@
 import type { Actions } from './$types';
-import { Resend } from 'resend';
-import { env } from '$env/dynamic/private';
 import { fail } from '@sveltejs/kit';
-
-const resend = new Resend(env.RESEND_API_KEY);
 
 export const actions = {
 	rsvp: async ({ request }) => {
@@ -19,16 +15,9 @@ export const actions = {
 			return fail(400, { missingRsvp: true });
 		}
 
-		const { data, error } = await resend.emails.send({
-			from: env.FROM_EMAIL,
-			to: env.TO_EMAIL,
-			subject: `[Wedding Invitation] RSVP - ${name}`,
-			text: `${rsvp}`
-		});
-
-		if (error) {
-			return fail(400, { name, emailError: true });
-		}
+		// RSVP 데이터는 수집되지만 이메일 전송은 하지 않음
+		// 필요시 콘솔에 출력하거나 다른 방식으로 저장 가능
+		console.log('RSVP received:', { name, rsvp });
 
 		return { success: true };
 	}
