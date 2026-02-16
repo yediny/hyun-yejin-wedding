@@ -295,8 +295,10 @@ section.gift {
 }
 
 .account .icon-btn {
+	.account .icon-btn {
 	position: absolute;
 	right: 0;
+}
 }
 
 .icon-btn {

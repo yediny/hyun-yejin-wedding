@@ -70,6 +70,7 @@
 	  
 		"bride_parents": {
 		  "mother": {
+			"name": "변경남",
 			"bank": "국민은행",
 			"phone": "010-0000-0000",
 			"account": "123-456-7890"
