@@ -19,7 +19,6 @@
 
 	<div class="cards">
 
-		<!-- 🤵 신랑 -->
 		<div class="card">
 			<h3>신랑</h3>
 			<p>{$_('gift_info.groom.name')}</p>
@@ -31,7 +30,6 @@
 			</button>
 		</div>
 
-		<!-- 👰 신부 -->
 		<div class="card">
 			<h3>신부</h3>
 			<p>{$_('gift_info.bride.name')}</p>
@@ -43,7 +41,6 @@
 			</button>
 		</div>
 
-		<!-- 👨‍👩‍👦 신랑측 혼주 -->
 		<div class="card">
 			<h3>신랑측 혼주</h3>
 
@@ -64,7 +61,6 @@
 			</button>
 		</div>
 
-		<!-- 👨‍👩‍👧 신부측 혼주 -->
 		<div class="card">
 			<h3>신부측 혼주</h3>
 
