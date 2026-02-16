@@ -44,6 +44,10 @@
 <img class="letter-bottom" src={letterBottom} alt="letter bottom" />
 
 <style lang="scss">
+	img.letter-bottom {
+		max-width: $content-max-width;
+		margin: auto;
+	}
 	section.letter {
 		padding: 4.5em 3.5em 3em 3.5em;
 	}
