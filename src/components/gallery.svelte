@@ -54,6 +54,12 @@
 			doubleTapToZoom: false, // 더블탭 확대 X
 			maxScale: 1.5
 		});
+		lightbox.on('zoomPanUpdate', (detail) => {
+			// scale이 1보다 커지면 강제로 1로 제한
+			if (detail.scale > 1) {
+				detail.instance.zoomTo(1, { x: 0, y: 0, time: 0 });
+			}
+		});
 		lightbox.init();
 		document.body.addEventListener('touchmove', (e) => {
 		if ((e as TouchEvent).scale && (e as TouchEvent).scale !== 1) {
