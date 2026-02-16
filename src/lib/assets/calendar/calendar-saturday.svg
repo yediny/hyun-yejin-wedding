@@ -8,7 +8,7 @@
   </defs>
   
   <!-- Day of week header -->
-  <text x="22.5" y="16" text-anchor="middle" font-size="18" fill="#7A7A7A" font-weight="400">S</text>
+  <text x="22.5" y="16" text-anchor="middle" font-size="17" fill="#7A7A7A" font-weight="400">S</text>
 
   <!-- Day 2 -->
   <text x="22.5" y="54" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">2</text>
