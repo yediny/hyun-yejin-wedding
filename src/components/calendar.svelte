@@ -71,5 +71,6 @@
 	min-width: 20px;        /* 너무 작아지지 않게 */
     max-height: 200px;         /* 모바일 화면에 맞게 제한 */
   }
+  }
 }
 </style>
