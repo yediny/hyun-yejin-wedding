@@ -12,7 +12,6 @@
 
 <Cover />
 <Letter />
-<Rsvp {form} />
 <Gallery />
 <Calendar />
 <Location />

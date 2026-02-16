@@ -36,6 +36,49 @@
 			"vegetarian": "채식 메뉴도 준비되어 있으니, 원하시는 경우 미리 알려주세요."
 		}
 	},
+	"gift_info": {
+		"title": "마음 전하실 곳",
+	  
+		"groom": {
+		  "name": "이현",
+		  "phone": "010-0000-0000",
+		  "bank": "국민은행",
+		  "account": "123-456-7890"
+		},
+	  
+		"bride": {
+		  "name": "김예진",
+		  "phone": "010-1111-2222",
+		  "bank": "신한은행",
+		  "account": "111-222-3333"
+		},
+	  
+		"groom_parents": {
+		  "father": {
+			"name": "이○○",
+			"bank": "국민은행",
+			"account": "222-333-4444"
+		  },
+		  "mother": {
+			"name": "김○○",
+			"bank": "농협",
+			"account": "555-666-7777"
+		  }
+		},
+	  
+		"bride_parents": {
+		  "father": {
+			"name": "김○○",
+			"bank": "신한은행",
+			"account": "888-999-0000"
+		  },
+		  "mother": {
+			"name": "박○○",
+			"bank": "우리은행",
+			"account": "111-222-3333"
+		  }
+		}
+	},
 	"gallery": {
 		"title": "사진 모음",
 		"sub_title": "사진을 탭하면 더 크게 볼 수 있습니다."
