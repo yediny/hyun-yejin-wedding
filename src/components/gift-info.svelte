@@ -3,6 +3,7 @@
 	import { localeStore } from '../i18n.svelte';
 	import rsvpDeco from '$lib/assets/rsvp-deco.svg';
 	import { Phone, Copy, CreditCard } from '@lucide/svelte';
+	import locationTopWave from '$lib/assets/location-top-wave.svg';
 
 	let groomOpen = $state(false);
 	let brideOpen = $state(false);
@@ -15,6 +16,7 @@
 	}
 </script>
 
+<img src={locationTopWave} class="location-top-wave" alt="" />
 <section class="gift">
 	<div class="header">
 		<img class="header-deco" src={rsvpDeco} alt="" />

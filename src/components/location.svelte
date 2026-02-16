@@ -37,8 +37,6 @@
 	});
 </script>
 
-<img src={locationTopWave} class="location-top-wave" alt="" />
-
 <section class="location">
 	<h2 class="title {localeStore.locale}">{$_('location.title')}</h2>
 
