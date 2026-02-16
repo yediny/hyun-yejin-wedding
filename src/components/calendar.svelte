@@ -28,9 +28,6 @@
 	position: relative;
 	background-color: $white;
 	padding: 2em 3.5em 4em 3.5em;
-	display: flex;
-	justify-content: center;  /* 전체 캘린더 중앙 정렬 */
-	box-sizing: border-box;   /* padding 포함해서 폭 계산 */
 
 	.title {
 		color: $primary-color;
