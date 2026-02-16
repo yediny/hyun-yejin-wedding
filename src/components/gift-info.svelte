@@ -227,9 +227,21 @@
 </section>
 
 <style lang="scss">
+img.location-top-wave {
+	max-width: $content-max-width;
+	margin: auto;
+}
+
+.header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
 section.gift {
 	padding: 3em 1.2em;
-	max-width: 480px;
+	max-width: $content-max-width;
 	margin: 0 auto;
 }
 
