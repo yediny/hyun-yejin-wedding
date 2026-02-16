@@ -13,5 +13,5 @@
 <Letter />
 <Gallery />
 <Calendar />
-<Location />
 <GiftInfo />
+<Location />

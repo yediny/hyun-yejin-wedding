@@ -39,7 +39,7 @@
 					<div class="person">
 						<p class="name">신랑 {$_('gift_info.groom.name')}</p>
 
-						<div class="row">
+						<div class="row center">
 							<Phone size="16" />
 							<a href={`tel:${$_('gift_info.groom.phone')}`}>
 								{$_('gift_info.groom.phone')}
@@ -49,9 +49,7 @@
 						<div class="row account">
 							<CreditCard size="16" />
 							<span>
-								{$_('gift_info.groom.bank')}
-								{' '}
-								{$_('gift_info.groom.account')}
+								{$_('gift_info.groom.bank')} {$_('gift_info.groom.account')}
 							</span>
 
 							<button
@@ -67,32 +65,54 @@
 						<button class="send">송금하기</button>
 					</div>
 
-					<!-- 혼주 -->
+					<!-- 신랑 아버지 -->
 					<div class="person">
-						<p class="name">혼주 {$_('gift_info.groom_parent.name')}</p>
-
-						<div class="row">
-							<Phone size="16" />
-							<a href={`tel:${$_('gift_info.groom_parent.phone')}`}>
-								{$_('gift_info.groom_parent.phone')}
-							</a>
-						</div>
+						<p class="name">혼주 {$_('gift_info.groom_parents.father.name')}</p>
 
 						<div class="row account">
 							<CreditCard size="16" />
 							<span>
-								{$_('gift_info.groom_parent.bank')}
+								{$_('gift_info.groom_parents.father.bank')}
 								{' '}
-								{$_('gift_info.groom_parent.account')}
+								{$_('gift_info.groom_parents.father.account')}
 							</span>
 
 							<button
 								class="icon-btn"
 								on:click={() =>
 									copy(
-										$_('gift_info.groom_parent.bank') +
+										$_('gift_info.groom_parents.father.bank') +
 											' ' +
-											$_('gift_info.groom_parent.account')
+											$_('gift_info.groom_parents.father.account')
+									)
+								}
+							>
+								<Copy size="14" />
+							</button>
+						</div>
+
+						<button class="send">송금하기</button>
+					</div>
+
+					<!-- 신랑 어머니 -->
+					<div class="person">
+						<p class="name">혼주 {$_('gift_info.groom_parents.mother.name')}</p>
+
+						<div class="row account">
+							<CreditCard size="16" />
+							<span>
+								{$_('gift_info.groom_parents.mother.bank')}
+								{' '}
+								{$_('gift_info.groom_parents.mother.account')}
+							</span>
+
+							<button
+								class="icon-btn"
+								on:click={() =>
+									copy(
+										$_('gift_info.groom_parents.mother.bank') +
+											' ' +
+											$_('gift_info.groom_parents.mother.account')
 									)
 								}
 							>
@@ -121,7 +141,7 @@
 					<div class="person">
 						<p class="name">신부 {$_('gift_info.bride.name')}</p>
 
-						<div class="row">
+						<div class="row center">
 							<Phone size="16" />
 							<a href={`tel:${$_('gift_info.bride.phone')}`}>
 								{$_('gift_info.bride.phone')}
@@ -131,9 +151,7 @@
 						<div class="row account">
 							<CreditCard size="16" />
 							<span>
-								{$_('gift_info.bride.bank')}
-								{' '}
-								{$_('gift_info.bride.account')}
+								{$_('gift_info.bride.bank')} {$_('gift_info.bride.account')}
 							</span>
 
 							<button
@@ -149,32 +167,54 @@
 						<button class="send">송금하기</button>
 					</div>
 
-					<!-- 혼주 -->
+					<!-- 신부 아버지 -->
 					<div class="person">
-						<p class="name">혼주 {$_('gift_info.bride_parent.name')}</p>
-
-						<div class="row">
-							<Phone size="16" />
-							<a href={`tel:${$_('gift_info.bride_parent.phone')}`}>
-								{$_('gift_info.bride_parent.phone')}
-							</a>
-						</div>
+						<p class="name">혼주 {$_('gift_info.bride_parents.father.name')}</p>
 
 						<div class="row account">
 							<CreditCard size="16" />
 							<span>
-								{$_('gift_info.bride_parent.bank')}
+								{$_('gift_info.bride_parents.father.bank')}
 								{' '}
-								{$_('gift_info.bride_parent.account')}
+								{$_('gift_info.bride_parents.father.account')}
 							</span>
 
 							<button
 								class="icon-btn"
 								on:click={() =>
 									copy(
-										$_('gift_info.bride_parent.bank') +
+										$_('gift_info.bride_parents.father.bank') +
 											' ' +
-											$_('gift_info.bride_parent.account')
+											$_('gift_info.bride_parents.father.account')
+									)
+								}
+							>
+								<Copy size="14" />
+							</button>
+						</div>
+
+						<button class="send">송금하기</button>
+					</div>
+
+					<!-- 신부 어머니 -->
+					<div class="person">
+						<p class="name">혼주 {$_('gift_info.bride_parents.mother.name')}</p>
+
+						<div class="row account">
+							<CreditCard size="16" />
+							<span>
+								{$_('gift_info.bride_parents.mother.bank')}
+								{' '}
+								{$_('gift_info.bride_parents.mother.account')}
+							</span>
+
+							<button
+								class="icon-btn"
+								on:click={() =>
+									copy(
+										$_('gift_info.bride_parents.mother.bank') +
+											' ' +
+											$_('gift_info.bride_parents.mother.account')
 									)
 								}
 							>
@@ -234,7 +274,19 @@ section.gift {
 
 .name {
 	font-weight: 600;
-	margin-bottom: 0.4em;
+	margin-bottom: 0.5em;
+}
+
+/* 가운데 정렬 */
+.row.center {
+	justify-content: center;
+	text-align: center;
+}
+
+/* 링크 스타일 제거 */
+.row a {
+	color: inherit;
+	text-decoration: none;
 }
 
 .row {
@@ -242,13 +294,7 @@ section.gift {
 	align-items: center;
 	gap: 0.5em;
 	font-size: 0.95rem;
-	margin: 0.25em 0;
-}
-
-/* 전화번호 링크 스타일 제거 */
-.row a {
-	color: inherit;
-	text-decoration: none;
+	margin: 0.3em 0;
 }
 
 .account {
@@ -260,7 +306,6 @@ section.gift {
 	padding: 0.2em;
 }
 
-/* 송금 버튼 */
 .send {
 	margin-top: 0.7em;
 	width: 100%;
@@ -273,8 +318,6 @@ section.gift {
 	font-size: 0.95rem;
 	font-weight: 500;
 	color: #333;
-
-	transition: all 0.2s ease;
 }
 
 .send:hover {
