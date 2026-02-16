@@ -40,7 +40,7 @@
 		.calendar-content {
 			display: flex;
 			justify-content: space-between;
-
+			width: 100%;
 			.week-col {
 				height: 100%;
 			}
