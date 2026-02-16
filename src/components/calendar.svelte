@@ -25,31 +25,50 @@
 
 <style lang="scss">
 	.calendar {
-		position: relative;
-		background-color: $white;
-		padding: 2em 3.5em 4em 3.5em;
+	position: relative;
+	background-color: $white;
+	padding: 2em 3.5em 4em 3.5em;
 
-		.title {
-			color: $primary-color;
-			font-size: 1.8rem;
-			font-weight: 700;
-			text-align: center;
-			margin-bottom: 1em;
-		}
+	.title {
+		color: $primary-color;
+		font-size: 1.8rem;
+		font-weight: 700;
+		text-align: center;
+		margin-bottom: 1em;
+	}
 
+	.calendar-content {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		max-width: $content-max-width;  /* 컬럼 전체 최대 폭 */
+		margin: 0 auto;    /* 중앙 정렬 */
+	}
+
+	.week-col {
+		height: 100%;       /* 기존 높이 유지 */
+		width: auto;        /* 모바일에서 비율 유지 */
+	}
+
+	img.calendar-deco {
+		position: absolute;
+		bottom: 0.5em;
+		right: 2.5em;
+	}
+
+	/* 모바일 대응 */
+	@media (max-width: $content-max-width) {
 		.calendar-content {
-			display: flex;
-			justify-content: space-between;
-			width: 100%;
-			.week-col {
-				height: 100%;
-			}
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 0.5em;   /* 컬럼 간 간격 */
 		}
 
-		img.calendar-deco {
-			position: absolute;
-			bottom: 0.5em;
-			right: 2.5em;
+		.week-col {
+			height: auto; /* 화면에 맞춰 비율 유지 */
+			width: 12%;   /* 모바일에서 7컬럼 균등 배치 */
+			min-width: 30px; /* 너무 작아지지 않도록 */
 		}
 	}
+}
 </style>
