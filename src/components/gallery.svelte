@@ -48,7 +48,10 @@
 			children: 'a',
 			showHideAnimationType: 'fade',
 			pswpModule: PhotoSwipe,
-			PhotoSwipeLightBox
+			zoom: false,           // 클릭시 확대 애니메이션 X
+			wheelToZoom: false,    // 마우스 휠 확대 X
+			pinchToZoom: false,    // 모바일 핀치 줌 X
+			doubleTapToZoom: false // 더블탭 확대 X
 		});
 		lightbox.init();
 	});
