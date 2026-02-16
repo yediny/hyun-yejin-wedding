@@ -15,59 +15,43 @@
 	import { localeStore } from '../i18n.svelte';
 	import { _ } from 'svelte-i18n';
 
+	// Lightbox 최대 크기 제한
+	const MAX_WIDTH = 1920;
+	const MAX_HEIGHT = 1080;
+
+	// 이미지 크기 조정 함수
+	function resizePhoto(w: number, h: number, maxW: number, maxH: number) {
+		const ratio = Math.min(maxW / w, maxH / h, 1); // 1보다 크면 그대로
+		return { width: Math.round(w * ratio), height: Math.round(h * ratio) };
+	}
+
+	const photosOriginal = [
+		{ src: photo1, width: 1280, height: 960 },
+		{ src: photo2, width: 1496, height: 1496 },
+		{ src: photo3, width: 1000, height: 750 },
+		{ src: photo4, width: 3024, height: 4032 },
+		{ src: photo5, width: 4284, height: 5712 },
+		{ src: photo6, width: 4000, height: 3000 },
+		{ src: photo7, width: 4032, height: 3024 },
+		{ src: photo8, width: 1496, height: 1496 }
+	];
+
+	// Lightbox용 최대 크기 적용
+	const photos = photosOriginal.map(p => {
+		const { width, height } = resizePhoto(p.width, p.height, MAX_WIDTH, MAX_HEIGHT);
+		return { src: p.src, width, height };
+	});
+
 	onMount(() => {
 		const lightbox = new PhotoSwipeLightBox({
 			gallery: '#gallery',
 			children: 'a',
 			showHideAnimationType: 'fade',
-			pswpModule: PhotoSwipe
+			pswpModule: PhotoSwipe,
+			PhotoSwipeLightBox
 		});
-
 		lightbox.init();
 	});
-
-	const photos = [
-		{
-			src: photo1,
-			width: 1200,
-			height: 1800
-		},
-		{
-			src: photo2,
-			width: 1200,
-			height: 1800
-		},
-		{
-			src: photo3,
-			width: 1200,
-			height: 1800
-		},
-		{
-			src: photo4,
-			width: 2000,
-			height: 1333
-		},
-		{
-			src: photo5,
-			width: 1200,
-			height: 1800
-		},
-		{
-			src: photo6,
-			width: 2000,
-			height: 1333
-		},
-		{
-			src: photo7,
-			width: 1200,
-			height: 1800
-		},
-		{
-			src: photo8,
-			width: 1200,
-			height: 1800
-		}
-	];
 </script>
 
 <section class="gallery">
@@ -91,64 +75,69 @@
 </section>
 
 <style lang="scss">
-	section.gallery {
-		padding: 4.5em 2em 2em 2em;
-		background-color: $white;
+section.gallery {
+	padding: 4.5em 2em 2em 2em;
+	background-color: $white;
+}
+
+.header {
+	margin-bottom: 2em;
+}
+
+h2.title {
+	text-align: center;
+	color: $primary-color;
+	&.en {
+		font-size: 1.8rem;
+		font-weight: 700;
+		letter-spacing: 1px;
 	}
 
-	.header {
-		margin-bottom: 2em;
+	&.kr {
+		font-size: 1.3rem;
+		font-weight: 600;
+		letter-spacing: 1px;
+	}
+}
+
+p.sub-title {
+	text-align: center;
+	&.kr {
+		margin-top: 0.9em;
+		font-size: 0.9rem;
 	}
 
-	h2.title {
-		text-align: center;
-		color: $primary-color;
-		&.en {
-			font-size: 1.8rem;
-			font-weight: 700;
-			letter-spacing: 1px;
-		}
-
-		&.kr {
-			font-size: 1.3rem;
-			font-weight: 600;
-			letter-spacing: 1px;
-		}
+	&.en {
+		margin-top: 0.5em;
+		font-size: 1.2rem;
 	}
+}
 
-	p.sub-title {
-		text-align: center;
-		&.kr {
-			margin-top: 0.9em;
-			font-size: 0.9rem;
-		}
+#gallery {
+	display: grid;
+	gap: 1em;
+	grid-template-columns: repeat(2, 1fr);
+	grid-auto-rows: auto; /* row 높이 자동 */
+}
 
-		&.en {
-			margin-top: 0.5em;
-			font-size: 1.2rem;
-		}
-	}
+.slide {
+	display: block;
+	width: 100%;
+}
 
-	#gallery {
-		display: grid;
-		gap: 1em;
-		grid-template-columns: repeat(2, 1fr);
-		grid-auto-rows: 6.5em;
-	}
+img.thumbnail {
+	border-radius: 4px;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
 
-	img.thumbnail {
-		border-radius: 4px;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-
-	.slide:nth-child(1),
-	.slide:nth-child(2),
-	.slide:nth-child(3),
-	.slide:nth-child(5),
-	.slide:nth-child(7),
-	.slide:nth-child(8) {
-		grid-row: span 2;
-	}
+.slide:nth-child(1),
+.slide:nth-child(2),
+.slide:nth-child(3),
+.slide:nth-child(5),
+.slide:nth-child(7),
+.slide:nth-child(8) {
+	grid-row: span 2;
+}
 </style>
