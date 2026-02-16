@@ -78,6 +78,10 @@
 </section>
 
 <style lang="scss">
+.pswp {
+  touch-action: pan-y; /* 세로 스크롤만 허용, 핀치 확대 막음 */
+}
+
 section.gallery {
 	padding: 4.5em 2em 2em 2em;
 	background-color: $white;
