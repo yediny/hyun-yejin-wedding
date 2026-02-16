@@ -56,19 +56,20 @@
 		right: 2.5em;
 	}
 
-	/* 모바일 대응 */
-	@media (max-width: 768px) {
-	.calendar-content {
-		flex-wrap: nowrap;      /* 한 줄 유지 */
-		justify-content: space-between;
-		gap: 0.2em;            /* gap 줄이기 */
-	}
+@media (max-width: 768px) {
+  .calendar-content {
+    display: flex;
+    flex-wrap: nowrap;         /* 한 줄 유지 */
+    justify-content: space-between;
+    align-items: flex-start;   /* 상단 기준 정렬 */
+    gap: 0.2em;                /* gap 줄이기 */
+  }
 
-	.week-col {
-		height: auto;
-		width: 13%;             /* 7컬럼 + gap 맞춰서 한 줄에 들어가도록 */
-		min-width: 20px;        /* 너무 작아지지 않게 */
-	}
-	}
+  .week-col {
+    height: auto;              /* 원본 비율 유지 */
+    width: auto;               /* width는 SVG 자체 비율에 따라 */
+	min-width: 20px;        /* 너무 작아지지 않게 */
+    max-height: 200px;         /* 모바일 화면에 맞게 제한 */
+  }
 }
 </style>
