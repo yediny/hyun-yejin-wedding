@@ -68,7 +68,12 @@
 					<!-- 신랑 아버지 -->
 					<div class="person">
 						<p class="name">혼주 {$_('gift_info.groom_parents.father.name')}</p>
-
+						<div class="row center">
+							<Phone size="16" />
+							<a href={`tel:${$_('gift_info.groom_parents.father.phone')}`}>
+								{$_('gift_info.groom_parents.father.phone')}
+							</a>
+						</div>
 						<div class="row account">
 							<CreditCard size="16" />
 							<span>
@@ -97,7 +102,12 @@
 					<!-- 신랑 어머니 -->
 					<div class="person">
 						<p class="name">혼주 {$_('gift_info.groom_parents.mother.name')}</p>
-
+						<div class="row center">
+							<Phone size="16" />
+							<a href={`tel:${$_('gift_info.groom_parents.mother.phone')}`}>
+								{$_('gift_info.groom_parents.mother.phone')}
+							</a>
+						</div>
 						<div class="row account">
 							<CreditCard size="16" />
 							<span>
@@ -166,40 +176,15 @@
 
 						<button class="send">송금하기</button>
 					</div>
-
-					<!-- 신부 아버지 -->
-					<div class="person">
-						<p class="name">혼주 {$_('gift_info.bride_parents.father.name')}</p>
-
-						<div class="row account">
-							<CreditCard size="16" />
-							<span>
-								{$_('gift_info.bride_parents.father.bank')}
-								{' '}
-								{$_('gift_info.bride_parents.father.account')}
-							</span>
-
-							<button
-								class="icon-btn"
-								on:click={() =>
-									copy(
-										$_('gift_info.bride_parents.father.bank') +
-											' ' +
-											$_('gift_info.bride_parents.father.account')
-									)
-								}
-							>
-								<Copy size="14" />
-							</button>
-						</div>
-
-						<button class="send">송금하기</button>
-					</div>
-
 					<!-- 신부 어머니 -->
 					<div class="person">
 						<p class="name">혼주 {$_('gift_info.bride_parents.mother.name')}</p>
-
+						<div class="row center">
+							<Phone size="16" />
+							<a href={`tel:${$_('gift_info.bride_parents.mother.phone')}`}>
+								{$_('gift_info.bride_parents.mother.phone')}
+							</a>
+						</div>
 						<div class="row account">
 							<CreditCard size="16" />
 							<span>
@@ -298,7 +283,20 @@ section.gift {
 }
 
 .account {
-	justify-content: space-between;
+	position: relative;
+	justify-content: center;
+	text-align: center;
+}
+
+.account span {
+	display: flex;
+	align-items: center;
+	gap: 0.4em;
+}
+
+.account .icon-btn {
+	position: absolute;
+	right: 0;
 }
 
 .icon-btn {
