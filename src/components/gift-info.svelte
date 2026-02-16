@@ -173,8 +173,11 @@
 								<Copy size="14" />
 							</button>
 						</div>
-
-						<button class="send">송금하기</button>
+						<button
+						class="send"
+						on:click={() => window.open('https://qr.kakaopay.com/Ej8CUO8y9', '_blank')}
+						>
+						송금하기</button>
 					</div>
 					<!-- 신부 어머니 -->
 					<div class="person">
@@ -295,10 +298,7 @@ section.gift {
 }
 
 .account .icon-btn {
-	.account .icon-btn {
-	position: absolute;
-	right: 0;
-}
+	position: static;
 }
 
 .icon-btn {
