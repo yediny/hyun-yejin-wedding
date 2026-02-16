@@ -64,13 +64,6 @@
     align-items: flex-start;   /* 상단 기준 정렬 */
     gap: 0.2em;                /* gap 줄이기 */
   }
-
-  .week-col {
-    height: auto;              /* 원본 비율 유지 */
-    width: auto;               /* width는 SVG 자체 비율에 따라 */
-	min-width: 20px;        /* 너무 작아지지 않게 */
-    max-height: 200px;         /* 모바일 화면에 맞게 제한 */
-  }
   }
 }
 </style>
