@@ -31,7 +31,7 @@
 	/>
 	<meta property="og:title" content="Hyun & Yejin's Wedding" />
 	<meta property="og:description" content="Please join us on our most special day!" />
-	<meta property="og:image" content="https://cover.webp" />
+	<meta property="og:image" content="/cover.webp" />
 	<meta property="og:url" content="https://hyun-yejin-wedding" />
 	<meta property="og:type" content="website" />
 </svelte:head>
