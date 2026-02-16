@@ -63,8 +63,6 @@
 								<Copy size="14" />
 							</button>
 						</div>
-
-						<button class="send">송금하기</button>
 					</div>
 
 					<!-- 신랑 아버지 -->
@@ -97,8 +95,6 @@
 								<Copy size="14" />
 							</button>
 						</div>
-
-						<button class="send">송금하기</button>
 					</div>
 
 					<!-- 신랑 어머니 -->
@@ -131,8 +127,6 @@
 								<Copy size="14" />
 							</button>
 						</div>
-
-						<button class="send">송금하기</button>
 					</div>
 
 				</div>
@@ -175,11 +169,6 @@
 								<Copy size="14" />
 							</button>
 						</div>
-						<button
-						class="send"
-						on:click={() => window.open('https://qr.kakaopay.com/Ej8CUO8y9', '_blank')}
-						>
-						송금하기</button>
 					</div>
 					<!-- 신부 어머니 -->
 					<div class="person">
@@ -211,8 +200,6 @@
 								<Copy size="14" />
 							</button>
 						</div>
-
-						<button class="send">송금하기</button>
 					</div>
 
 				</div>
