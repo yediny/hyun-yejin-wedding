@@ -55,6 +55,11 @@
 			maxScale: 1.5
 		});
 		lightbox.init();
+		document.body.addEventListener('touchmove', (e) => {
+		if ((e as TouchEvent).scale && (e as TouchEvent).scale !== 1) {
+			e.preventDefault();
+		}
+	}, { passive: false });
 	});
 </script>
 
