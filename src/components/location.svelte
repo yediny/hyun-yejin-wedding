@@ -1,13 +1,11 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import locationTopWave from '$lib/assets/location-top-wave.svg';
-
 	import locationDeco from '$lib/assets/location-deco.svg';
 	import { _ } from 'svelte-i18n';
 	import { localeStore } from '../i18n.svelte';
 	import { Clipboard, Github } from '@lucide/svelte';
-	import { PUBLIC_GOOGLE_MAPS_API_KEY } from '$env/static/public';
-
-	const googleMapsUrl = `https://www.google.com/maps/embed/v1/place?key=${PUBLIC_GOOGLE_MAPS_API_KEY}&q=${encodeURIComponent('남산 한남 웨딩 가든')}`;
+	import { PUBLIC_NAVER_MAPS_API_KEY } from '$env/static/public';
 
 	function copyAddress() {
 		navigator.clipboard
@@ -15,31 +13,57 @@
 			.then(() => alert($_('location.address_copied')))
 			.catch(() => null);
 	}
+
+	onMount(() => {
+		// 네이버 지도 SDK 동적 로드
+		const script = document.createElement('script');
+		script.src = `https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${PUBLIC_NAVER_MAPS_API_KEY}`;
+		script.async = true;
+
+		script.onload = () => {
+			const map = new naver.maps.Map('naverMap', {
+				center: new naver.maps.LatLng(37.5512, 126.9873), // 남산 한남 웨딩가든
+				zoom: 16
+			});
+
+			new naver.maps.Marker({
+				position: new naver.maps.LatLng(37.5512, 126.9873),
+				map: map
+			});
+		};
+
+		document.head.appendChild(script);
+	});
 </script>
 
 <img src={locationTopWave} class="location-top-wave" alt="" />
+
 <section class="location">
 	<h2 class="title {localeStore.locale}">{$_('location.title')}</h2>
+
 	<p class="venue en">남산 한남 웨딩 가든</p>
+
 	<button class="copy-address en" onclick={copyAddress}>
 		<span class="clipboard-icon">
 			<Clipboard size="1.1em" />
 		</span>
-		<span class="address">서울 용산구 소월로 323</span></button
-	>
+		<span class="address">서울 용산구 소월로 323</span>
+	</button>
+
 	<div class="map">
-		<iframe
-			class="google-maps"
-			title="google maps"
-			allowfullscreen
-			referrerpolicy="no-referrer-when-downgrade"
-			src={googleMapsUrl}
-		></iframe>
+		<div id="naverMap" class="naver-map"></div>
 	</div>
+
 	<p class="signature en">made with ♡ by Yejin & Hyun</p>
-	<a class="github-icon" href="https://github.com/anthopark/our-wedding-invitation" target="_blank"
-		><Github size="1.1em" strokeWidth={1} /></a
+
+	<a
+		class="github-icon"
+		href="https://github.com/anthopark/our-wedding-invitation"
+		target="_blank"
 	>
+		<Github size="1.1em" strokeWidth={1} />
+	</a>
+
 	<img class="location-deco" src={locationDeco} alt="" />
 </section>
 
@@ -50,56 +74,12 @@
 	}
 
 	section.location {
-		position: relative;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		position: relative;
 		background-color: $bg-color-1;
-		padding: 1em 2em 1em 2em;
-	}
-
-	h2.title {
-		color: $primary-color;
-		text-align: center;
-		margin-bottom: 1em;
-
-		&.kr {
-			font-size: 1.3rem;
-			font-weight: 600;
-			letter-spacing: 1px;
-		}
-
-		&.en {
-			font-size: 1.8rem;
-			font-weight: 700;
-			letter-spacing: 1px;
-		}
-	}
-
-	p.venue {
-		&.en {
-			font-size: 1.1rem;
-		}
-	}
-
-	button.copy-address {
-		display: flex;
-		align-items: center;
-		margin-top: 0.5em;
-
-		.clipboard-icon {
-			height: 1em;
-			display: inline-block;
-			margin-right: 0.2em;
-			color: $font-color-default;
-		}
-
-		.address {
-			display: inline-block;
-			font-size: 1.2rem;
-			text-decoration: underline;
-		}
+		padding: 1em 2em;
+		position: relative;
 	}
 
 	.map {
@@ -109,10 +89,9 @@
 		margin-bottom: 7em;
 	}
 
-	iframe.google-maps {
+	.naver-map {
 		width: 100%;
 		height: 100%;
-		border: none;
 		border-radius: 8px;
 		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 	}
@@ -120,6 +99,7 @@
 	p.signature {
 		font-size: 1rem;
 	}
+
 	.github-icon {
 		margin-top: 0.2em;
 		color: $font-color-default;
