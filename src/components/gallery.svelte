@@ -15,16 +15,16 @@
 	import { localeStore } from '../i18n.svelte';
 	import { _ } from 'svelte-i18n';
 
-	// Lightbox 최대 크기 제한
+// Lightbox 최대 크기 제한
 	const MAX_WIDTH = 1920;
 	const MAX_HEIGHT = 1080;
-
-	// 이미지 크기 조정 함수
+	
+// 이미지 크기 조정 함수
 	function resizePhoto(w: number, h: number, maxW: number, maxH: number) {
 		const ratio = Math.min(maxW / w, maxH / h, 1); // 1보다 크면 그대로
 		return { width: Math.round(w * ratio), height: Math.round(h * ratio) };
 	}
-
+	
 	const photosOriginal = [
 		{ src: photo1, width: 1280, height: 960 },
 		{ src: photo2, width: 1496, height: 1496 },
@@ -48,28 +48,18 @@
 			children: 'a',
 			showHideAnimationType: 'fade',
 			pswpModule: PhotoSwipe,
-			zoom: false,           // 클릭 시 확대 X
+			zoom: false,           // 클릭시 확대 애니메이션 X
 			wheelToZoom: false,    // 마우스 휠 확대 X
-			pinchToZoom: false,    // 모바일 핀치 확대 X
-			doubleTapToZoom: false // 더블탭 확대 X
+			pinchToZoom: false,    // 모바일 핀치 줌 X
+			doubleTapToZoom: false, // 더블탭 확대 X
+			maxScale: 1.5
 		});
 		lightbox.init();
-
-		// 모바일 핀치 확대 차단
-		document.body.addEventListener(
-			'touchmove',
-			(e: TouchEvent) => {
-				if (e.scale && e.scale !== 1) e.preventDefault();
-			},
-			{ passive: false }
-		);
-
-		// 모바일 더블탭 확대 차단
-		document.body.addEventListener(
-			'gesturestart',
-			(e) => e.preventDefault(),
-			{ passive: false }
-		);
+		document.body.addEventListener('touchmove', (e) => {
+		if ((e as TouchEvent).scale && (e as TouchEvent).scale !== 1) {
+			e.preventDefault();
+		}
+	}, { passive: false });
 	});
 </script>
 
@@ -94,10 +84,9 @@
 </section>
 
 <style lang="scss">
-	/* 모바일 핀치/확대 방지 */
-	:global(.pswp) {
-		touch-action: pan-y; /* 세로 스크롤만 허용, 핀치 확대 방지 */
-	}
+.pswp {
+  touch-action: pan-y; /* 세로 스크롤만 허용, 핀치 확대 막음 */
+}
 
 	section.gallery {
 		padding: 4.5em 2em 2em 2em;
@@ -112,27 +101,29 @@
 		text-align: center;
 		color: $primary-color;
 		&.en {
-			font-size: 1.8rem;
-			font-weight: 700;
-			letter-spacing: 1px;
-		}
-		&.kr {
-			font-size: 1.3rem;
-			font-weight: 600;
-			letter-spacing: 1px;
-		}
+		font-size: 1.8rem;
+		font-weight: 700;
+		letter-spacing: 1px;
+	}
+
+	&.kr {
+		font-size: 1.3rem;
+		font-weight: 600;
+		letter-spacing: 1px;
+	}
 	}
 
 	p.sub-title {
 		text-align: center;
 		&.kr {
-			margin-top: 0.9em;
-			font-size: 0.9rem;
-		}
-		&.en {
-			margin-top: 0.5em;
-			font-size: 1.2rem;
-		}
+		margin-top: 0.9em;
+		font-size: 0.9rem;
+	}
+
+	&.en {
+		margin-top: 0.5em;
+		font-size: 1.2rem;
+	}
 	}
 
 	#gallery {
@@ -140,12 +131,12 @@
 		gap: 1em;
 		grid-template-columns: repeat(2, 1fr);
 		grid-auto-rows: 6.5em;
-	}
+		}
 
-	.slide {
-		display: block;
-		width: 100%;
-	}
+.slide {
+	display: block;
+	width: 100%;
+}	
 
 	img.thumbnail {
 		border-radius: 4px;
@@ -162,4 +153,5 @@
 	.slide:nth-child(8) {
 		grid-row: span 2;
 	}
+
 </style>
