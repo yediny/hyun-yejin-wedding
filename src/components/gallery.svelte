@@ -52,7 +52,7 @@
 			wheelToZoom: false,    // 마우스 휠 확대 X
 			pinchToZoom: false,    // 모바일 핀치 줌 X
 			doubleTapToZoom: false, // 더블탭 확대 X
-			maxScale: 1
+			maxScale: 1.5
 		});
 		lightbox.init();
 	});
