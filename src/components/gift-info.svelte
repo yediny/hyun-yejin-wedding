@@ -226,7 +226,9 @@
 
 <style lang="scss">
 section.gift {
-	padding: 4em 2em;
+	padding: 3em 1.2em;
+	max-width: 480px;
+	margin: 0 auto;
 }
 
 .group {
