@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="45" height="245" xmlns="http://www.w3.org/2000/svg">
+<svg width="45" height="242" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&amp;display=swap');
@@ -8,22 +8,22 @@
   </defs>
   
   <!-- Day of week header -->
-  <text x="22.5" y="24" text-anchor="middle" font-size="20" fill="#7A7A7A" font-weight="400">S</text>
+  <text x="22.5" y="20" text-anchor="middle" font-size="18" fill="#7A7A7A" font-weight="400">S</text>
 
   <!-- Day 2 -->
-  <text x="22.5" y="55" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">2</text>
+  <text x="22.5" y="52" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">2</text>
 
   <!-- Day 9 -->
-  <text x="22.5" y="95" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">9</text>
+  <text x="22.5" y="92" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">9</text>
 
   <!-- Day 16 -->
-  <text x="22.5" y="135" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">16</text>
+  <text x="22.5" y="132" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">16</text>
 
   <!-- Highlighted day 23 -->
-  <circle cx="22.5" cy="169" r="13" fill="#B89B9B"/>
-  <text x="22.5" y="174" text-anchor="middle" font-size="14" fill="#FFFFFF" font-weight="400">23</text>
-  <text x="22.5" y="191" text-anchor="middle" font-size="9" fill="#B89B9B">11pm</text>
+  <circle cx="22.5" cy="166" r="13" fill="#B89B9B"/>
+  <text x="22.5" y="171" text-anchor="middle" font-size="14" fill="#FFFFFF" font-weight="400">23</text>
+  <text x="22.5" y="188" text-anchor="middle" font-size="9" fill="#B89B9B">11pm</text>
 
   <!-- Day 30 -->
-  <text x="22.5" y="215" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">30</text>
+  <text x="22.5" y="212" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">30</text>
 </svg>
