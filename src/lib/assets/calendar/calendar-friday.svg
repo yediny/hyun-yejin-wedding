@@ -8,20 +8,20 @@
   </defs>
   
   <!-- Day of week header -->
-  <text x="22.5" y="20" text-anchor="middle" font-size="18" fill="#7A7A7A" font-weight="400">F</text>
+  <text x="22.5" y="20" text-anchor="middle" font-size="17" fill="#7A7A7A" font-weight="400">F</text>
 
   <!-- Day 1 -->
-  <text x="22.5" y="52" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">1</text>
+  <text x="22.5" y="54" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">1</text>
 
   <!-- Day 8 -->
-  <text x="22.5" y="92" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">8</text>
+  <text x="22.5" y="94" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">8</text>
 
   <!-- Day 15 -->
-  <text x="22.5" y="132" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">15</text>
+  <text x="22.5" y="134" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">15</text>
 
   <!-- Day 22 -->
-  <text x="22.5" y="172" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">22</text>
+  <text x="22.5" y="174" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">22</text>
 
   <!-- Day 29 -->
-  <text x="22.5" y="212" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">29</text>
+  <text x="22.5" y="214" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">29</text>
 </svg>

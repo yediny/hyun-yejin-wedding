@@ -11,19 +11,19 @@
   <text x="22.5" y="20" text-anchor="middle" font-size="18" fill="#7A7A7A" font-weight="400">S</text>
 
   <!-- Day 2 -->
-  <text x="22.5" y="52" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">2</text>
+  <text x="22.5" y="54" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">2</text>
 
   <!-- Day 9 -->
-  <text x="22.5" y="92" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">9</text>
+  <text x="22.5" y="94" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">9</text>
 
   <!-- Day 16 -->
-  <text x="22.5" y="132" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">16</text>
+  <text x="22.5" y="134" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">16</text>
 
   <!-- Highlighted day 23 -->
   <circle cx="22.5" cy="166" r="13" fill="#B89B9B"/>
-  <text x="22.5" y="171" text-anchor="middle" font-size="14" fill="#FFFFFF" font-weight="400">23</text>
-  <text x="22.5" y="188" text-anchor="middle" font-size="9" fill="#B89B9B">11pm</text>
+  <text x="22.5" y="173" text-anchor="middle" font-size="14" fill="#FFFFFF" font-weight="400">23</text>
+  <text x="22.5" y="190" text-anchor="middle" font-size="9" fill="#B89B9B">11pm</text>
 
   <!-- Day 30 -->
-  <text x="22.5" y="212" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">30</text>
+  <text x="22.5" y="214" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">30</text>
 </svg>
