@@ -23,7 +23,7 @@
 		script.onload = () => {
 			const map = new naver.maps.Map('naverMap', {
 				center: new naver.maps.LatLng(37.541522, 126.997032), // 남산 한남 웨딩가든
-				zoom: 16
+				zoom: 18
 			});
 
 			new naver.maps.Marker({
