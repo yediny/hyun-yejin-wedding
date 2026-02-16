@@ -57,18 +57,18 @@
 	}
 
 	/* 모바일 대응 */
-	@media (max-width: $content-max-width) {
-		.calendar-content {
-			flex-wrap: wrap;
-			justify-content: center;
-			gap: 0.5em;   /* 컬럼 간 간격 */
-		}
+	@media (max-width: 768px) {
+	.calendar-content {
+		flex-wrap: nowrap;      /* 한 줄 유지 */
+		justify-content: space-between;
+		gap: 0.2em;            /* gap 줄이기 */
+	}
 
-		.week-col {
-			height: auto; /* 화면에 맞춰 비율 유지 */
-			width: 12%;   /* 모바일에서 7컬럼 균등 배치 */
-			min-width: 30px; /* 너무 작아지지 않도록 */
-		}
+	.week-col {
+		height: auto;
+		width: 13%;             /* 7컬럼 + gap 맞춰서 한 줄에 들어가도록 */
+		min-width: 20px;        /* 너무 작아지지 않게 */
+	}
 	}
 }
 </style>
