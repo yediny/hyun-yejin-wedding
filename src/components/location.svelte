@@ -22,13 +22,14 @@
 
 		script.onload = () => {
 			const map = new naver.maps.Map('naverMap', {
-				center: new naver.maps.LatLng(37.5512, 126.9873), // 남산 한남 웨딩가든
+				center: new naver.maps.LatLng(37.541522, 126.997032), // 남산 한남 웨딩가든
 				zoom: 16
 			});
 
 			new naver.maps.Marker({
-				position: new naver.maps.LatLng(37.5512, 126.9873),
-				map: map
+				position: new naver.maps.LatLng(37.541522, 126.997032),
+				map: map,
+				title: '남산 한남 웨딩 가든'
 			});
 		};
 
